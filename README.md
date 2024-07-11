@@ -34,8 +34,7 @@ void setup() {
     BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
     pAdvertising->addServiceUUID(SERVICE_UUID);
     pAdvertising->setScanResponse(true);
-    pAdvertising->setMinPreferred(0x06);  ![Screenshot_20240711_211401_nRF Connect](https://github.com/betty990/assignment-1_harshalimohite/assets/165001630/90efda7d-0aac-40c5-b12a-aa0330b6d999)
-
+    pAdvertising->setMinPreferred(0x06);  
     pAdvertising->setMinPreferred(0x12);
     BLEDevice::startAdvertising();
     Serial.println("Waiting a client connection to notify...");
